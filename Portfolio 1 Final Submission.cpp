@@ -223,26 +223,27 @@ int main() {
     levels.push_back(Level("A New Enemy", {
         "#########",
         "##@      #",
-        "##  >  # #",
-        "##     #$#",
+        "##  >  ###",
+        "##      $#",
         "#########"
     }));
 
     levels.push_back(Level("The Truth of the Weapon", {
-        "###########",
-        "##@   v    #",
-        "### #######",
-        "##   >    $#",
-        "###########"
+        "#############",
+        "##@         #",
+        "##### # # # #",
+        "##   v  # # #",
+        "##      # #$#",
+        "#############"
     }));
 
     levels.push_back(Level("Revenge of the General", {
         "#############",
         "##@  >       #",
-        "## ####### # #",
-        "## #     v # #",
-        "## # $ #######",
-        "##   #       #",
+        "### # ### ####",
+        "### # # v # #",
+        "####$#   ####",
+        "###         #",
         "#############"
     }));
 
@@ -269,6 +270,7 @@ int main() {
         if (choice == "1" || lowerChoice == "1) a new enemy" || lowerChoice == toLowerCase(levels[0].getName())) {
             selectedLevel = levels[0];
         } else if (choice == "2" || lowerChoice == "2) the truth of the weapon" || lowerChoice == toLowerCase(levels[1].getName())) {
+            selectedLevel = levels[2]; // Points directly to the expanded level array index
             selectedLevel = levels[1];
         } else if (choice == "3" || lowerChoice == "3) revenge of the general" || lowerChoice == toLowerCase(levels[2].getName())) {
             selectedLevel = levels[2];
